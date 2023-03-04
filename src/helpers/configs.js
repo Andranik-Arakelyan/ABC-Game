@@ -1,4 +1,4 @@
-const config = {
+export const { ALPHABET, DURATION, TIMER, LEVELS } = {
   DURATION: 30,
   TIMER: 5,
   ALPHABET: [
@@ -52,5 +52,3 @@ const config = {
     { id: 20, label: "Lvl 20", range: [5, 7] },
   ],
 };
-
-export default config;

@@ -4,7 +4,8 @@ import { createUseStyles } from "react-jss";
 const useStyles = createUseStyles({
   circleBtn: {
     borderRadius: "50%",
-    border: "5px solid rgb(238, 237, 240)",
+    backgroundColor: "transparent",
+    border: "5px solid",
     padding: "15px",
     width: "200px",
     height: "200px",
@@ -19,14 +20,14 @@ const useStyles = createUseStyles({
   },
 });
 
-function Button({ onClick, children, className, bgc, onMouseEnter }) {
+function Button({ onClick, children, className, borderColor, onMouseEnter }) {
   const styles = useStyles();
   return (
     <div
       onMouseEnter={onMouseEnter}
       onClick={onClick}
-      className={`${styles.circleBtn} ${className} btn-all `}
-      style={{ backgroundColor: bgc }}
+      className={`${styles.circleBtn} ${className}`}
+      style={{ borderColor: borderColor }}
     >
       <span className={styles.text}>{children}</span>
     </div>
