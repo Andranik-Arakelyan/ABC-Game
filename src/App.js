@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import NewGame from "./components/NewGame";
 import Process from "./components/Process";
 import GameOver from "./components/GameOver";
-import config from "./helpers/configs";
+import { ALPHABET, DURATION, TIMER, LEVELS } from "./helpers/configs";
 import { getRandomFromRange, shuffle } from "./helpers/helper";
 import Congrats from "./components/Congrats";
 
@@ -59,7 +59,7 @@ function App() {
   };
   const { question, answer, allAnswers } = useMemo(() => {
     const result = questionGenerate(currentLevel);
-    // console.log(result.answer);     // put off from comment to see correct answer of each question
+    console.log(result.answer); // put off from comment to see correct answer of each question
     return result;
   }, [currentLevel, failed]);
 
